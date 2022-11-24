@@ -2,16 +2,14 @@ import { Journey, Comparisons } from './types';
 
 const isValidWalk = (arrDirections: Journey) : boolean => {
 
-    if(!Array.isArray(arrDirections)) return false;
-    
-    if(arrDirections.length !== 10) return false;
+    if(!Array.isArray(arrDirections) || arrDirections.length !== 10) return false;
 
-    const objComparisonTable: Comparisons = arrDirections.reduce((acc, el) => {
-        acc[el]+=1
-        return acc
-    },{ n:0, s:0, e:0, w:0 } as Comparisons)
+    const objComparisonTable: Comparisons = { n:0, s:0, e:0, w:0 } 
 
-    if(Object.keys(objComparisonTable).length !== 4) return false
+    for (let index = 0; index < arrDirections.length; index++) {
+      if(typeof objComparisonTable[arrDirections[index]] === 'undefined') return false
+      objComparisonTable[arrDirections[index]] +=1
+    }
 
     if(objComparisonTable['n'] !== objComparisonTable['s'] || objComparisonTable['w'] !== objComparisonTable['e']) return false
 
