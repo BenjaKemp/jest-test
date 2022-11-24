@@ -1,4 +1,4 @@
-type Directions = ("n" | "s" | "e" | "w");
+type Directions = ('n' | 's' | 'e' | 'w');
 
 type Journey = Directions[];
 
