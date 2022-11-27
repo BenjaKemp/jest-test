@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "ES6",
+      "declaration": true,
+      "outDir": "./lib",
+      "strict": true,
+      "noImplicitAny": true
+    },
+    "include": ["**.ts",  "journies.json"],
+    "exclude": ["node_modules"]
+  }

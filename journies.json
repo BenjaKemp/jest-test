@@ -1,0 +1,9 @@
+{
+    "tooLong": ["w","e","w","e","w","e","w","e","w","e","w","e"], 
+    "tooShort": ["w"], 
+    "oneDimensionVertical":["n","s","n","s","n","s","n","s","n","s"], 
+    "oneDimensionHorizontal": ["e","w","e","w","e","w","e","w","e","w"], 
+    "twoDimension": ["n","s","e","w","n","s","e","w","e","w"],
+    "nonArray": { "a": "a", "b": "b"}, 
+    "inCorrectLetters": ["b","d","e","w","b","d","e","w","e","w"]
+}
